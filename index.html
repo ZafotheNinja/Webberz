@@ -1,164 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizon Handyman</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Added text shadow for better visibility */
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      color: #fff;
-      background-image: url('background.png'); /* Add your background image URL */
-      background-size: cover;
-    }
-
-	header {
-	  background-color: #333;
-	  color: #fff; /* Text color changed to white */
-	  padding: 10px;
-	  text-align: center;
-	  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Added text shadow for better visibility */
-	  font-size: 32px; /* Adjusted font size */
-	  font-family: 'Libre Baskerville', serif;
-	}
-
-
-    nav {
-      background-color: #4d4d4d;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    section {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .service-button, .portfolio-button {
-      text-decoration: none;
-      color: #fff;
-      display: inline-block;
-      padding: 15px;
-      border-radius: 8px;
-      
-      margin: 0 10px;
-    }
-
-    .service-button {
-      /* background-color: #8B0000; */
-	  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-    }
-
-    .portfolio-button {
-      background-color: #333; /* Dark Gray */
-	  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    }
-
-    li {
-      margin-bottom: 20px;
-    }
-
-    #contract {
-      padding-bottom: 200px;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    footer p {
-      margin: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We the People - Democratic Reform Movement</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="page-container">
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-image-container">
+                    <img
+                        alt="American flag waving majestically against a blue sky"
+                        src="flag.jpeg"
+                        class="hero-image"
+                    />
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">We the People</h1>
+                    <p class="hero-description">
+                        Join the movement to restore power to the American people by standing together as a united front
+                    </p>
+                    <a
+                        class="cta-button"
+                        href="#join"
+                        role="button"
+                        aria-label="Join the movement for government reform"
+                    >
+                        Join the Movement
+                    </a>
+                </div>
+            </section>
 
-  <header>
-    <h1>Horizon Handyman <br> (423) 368-4553</h1>
-  </header>
+            <!-- Mission Section -->
+            <section class="mission-section">
+                <div class="mission-container">
+                    <h2 class="mission-title">Our Mission</h2>
+                    <div class="mission-cards">
+                        <article class="mission-card">
+                            <img
+                                class="mission-icon"
+                                src="ico1.jpeg"
+                                alt="Voice of the People icon"
+                            />
+                            <h3 class="mission-card-title">Voice of the People</h3>
+                            <p class="mission-card-description">
+                                Restoring and securing the voice of every American Citizen in our government
+                            </p>
+                        </article>
 
-  <nav>
-    <a href="portfolio.html">Portfolio</a>
-	<a onclick="showPhoneNumberPopup()">Book Now</a>
-  </nav>
+                        <article class="mission-card">
+                            <img
+                                class="mission-icon"
+                                src="ico2.jpeg"
+                                alt="Constitutional Rights icon"
+                            />
+                            <h3 class="mission-card-title">Community</h3>
+                            <p class="mission-card-description">
+                                Create a system of community and communication between the people for America's future
+                            </p>
+                        </article>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>We offer a range of high-quality handyman services to meet your needs,</p>
-	<p>Home Repairs, Painting, Plumbing, Drywall, Electrical Work and More...</p>
-    
-	  
-    <!--
-	<ul>
-      <li><a href="home-repairs.html" class="service-button">Home Repairs</a></li>
-      <li><a href="painting.html" class="service-button">Painting</a></li>
-      <li><a href="plumbing.html" class="service-button">Plumbing</a></li>
-      <li><a href="drywall.html" class="service-button">Drywall</a></li>
-      <li><a href="electrical-work.html" class="service-button">Electrical Work</a></li>
-      <li><a href="more-services.html" class="service-button">And More...</a></li>
-    </ul>
-	
+                        <article class="mission-card">
+                            <img
+                                class="mission-icon"
+                                src="ico3.jpeg"
+                                alt="Democratic Reform icon"
+                            />
+                            <h3 class="mission-card-title">Government Reform</h3>
+                            <p class="mission-card-description">
+                                Build a more transparent, accountable and efficient government for all
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-	<li><a onclick="showPhoneNumberPopup()" class="portfolio-button">And More...</a></li>
-	
-	-->
-    <script>
-      function showPhoneNumberPopup() {
-        alert("Call us at: +1 (423) 368-4553"); // Replace with your actual phone number
-      }
-    </script>
-	
-  </section>
+            <!-- Action Section -->
+            <section id="join" class="action-section">
+                <div class="action-container">
+                    <h2 class="action-title">Take Action Now</h2>
+                    <p class="action-description">
+                        Join thousands of Americans working together to restore our
+                        democracy
+                    </p>
+                    <form id="signup-form" aria-label="Sign up form" class="signup-form">
+                        <div class="form-group">
+                            <label for="email-input" class="form-label">Email Address</label>
+                            <input
+                                id="email-input"
+                                type="email"
+                                aria-describedby="email-error"
+                                placeholder="Enter your email"
+                                class="form-input"
+                            />
+                            <div
+                                id="email-error"
+                                role="alert"
+                                class="error-message"
+                            ></div>
+                        </div>
+                        <button
+                            class="submit-button"
+                            type="submit"
+                            aria-label="Submit email to join movement"
+                            id="submit-button"
+                        >
+                            <span id="button-text">Sign Up</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>Explore our previous projects to see the quality of our work.</p>
-    <a href="portfolio.html" class="portfolio-button">View Portfolio</a>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Horizon Handyman is a small, owner-operated business that got its start in early 2016.</p>
-    <p>We are dedicated to providing top-notch handyman services to our clients. With years of experience serving the Greater Chattanooga Area, our skilled team is ready to tackle any project, big or small.</p>
-    <p>We arrive within a 15-minute window, exceeding industry standards. All of our crew do their work with a positive attitude and are completely drug-free.</p>
-  </section>
-  
-  <section id="contract">
-	<p>You can find our service agreement here:</p>
-	<a href="IndependantContractorAgreement.pdf" class="portfolio-button">Download Service Agreement</a>
-  </section>
-  
-  <footer>
-    <p>Business Hours: Monday - Friday, 8 am to 6 pm | Closed on Saturday and Sunday</p>
-    <p>&copy; 2023 Horizon Handyman</p>
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
