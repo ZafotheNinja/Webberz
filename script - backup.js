@@ -1,6 +1,12 @@
+// import PocketBase from 'pocketbase';
+
+// const pb = new PocketBase('http://209.141.51.14:8090');
+
 import PocketBase from './js/pocketbase.es.js';
 
-const pb = new PocketBase('https://pb.wethepeople.network');
+const pb = new PocketBase('http://209.141.51.14:8090');
+
+console.log("Script Loaded");
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get form elements
@@ -26,36 +32,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form submission handler
     async function handleSubmit(event) {
-		event.preventDefault();
+        event.preventDefault();
 
-		emailError.textContent = '';
-		const email = emailInput.value.trim();
+        // Clear previous error
+        emailError.textContent = '';
+		console.log("Hello world!");
 
-		if (!email) {
-			emailError.textContent = 'Email is required';
-			return;
-		}
+        // Get email value
+        const email = emailInput.value.trim();
 
-		if (!validateEmail(email)) {
-			emailError.textContent = 'Please enter a valid email';
-			return;
-		}
+        // Validate email
+        if (!email) {
+            emailError.textContent = 'Email is required';
+            return;
+        }
 
-		setSubmitting(true);
+        if (!validateEmail(email)) {
+            emailError.textContent = 'Please enter a valid email';
+            return;
+        }
 
-		try {
-			const record = await pb.collection('email_list').create({ email });
-			alert('Thank you for joining the movement!');
-			form.reset(); // Optional: reset form after successful submission
-		} catch (error) {
-			console.error(error);
-			form.reset();
-			// emailError.textContent = 'Failed to submit. Please try again.';
-		}
+        // Set submitting state
+        setSubmitting(true);
 
-		setSubmitting(false);
-	}
+        try {
+            // Simulated API call
+            //await new Promise(resolve => setTimeout(resolve, 1000));
 
+			const record = await pb.collection('email_list').create({
+				email: `test${Date.now()}@example.com`
+			});
+            alert('Thank you for joining the movement!');
+        } catch (error) {
+            // Show error message
+			console.error(err);
+            emailError.textContent = 'Failed to submit. Please try again.';
+        }
+
+        // Reset submitting state
+        setSubmitting(false);
+    }
 
     // Handle keyboard events for accessibility
     function handleKeyDown(event) {

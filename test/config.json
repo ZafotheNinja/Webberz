@@ -1,0 +1,9 @@
+{
+  "cors": {
+    "enabled": true,
+    "origins": ["*"],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "headers": ["*"],
+    "credentials": false
+  }
+}

@@ -1,6 +1,7 @@
 import PocketBase from './js/pocketbase.es.js';
 
-const pb = new PocketBase('https://pb.wethepeople.network');
+// const pb = new PocketBase('https://pb.wethepeople.network');
+const pb = new PocketBase('/pb');
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get form elements

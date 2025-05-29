@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Welcome to nginx!</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
+  <meta charset="UTF-8" />
+  <title>Test Email Submit</title>
 </head>
 <body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
+  <h2>Test Email Submission</h2>
+  <button id="test-submit">Submit Test Email</button>
+  <p id="result"></p>
 
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
+	<script type="module">
+  import PocketBase from './js/pocketbase.es.js';
 
-<p><em>Thank you for using nginx.</em></p>
+  // const pb = new PocketBase('http://209.141.51.14:8090');
+  // const pb = new PocketBase('https://pb.wethepeople.network');
+  // const pb = new PocketBase('https://pocketbase:8090');
+  const pb = new PocketBase('/pb');
+
+  const result = document.getElementById('result');
+
+  document.getElementById('test-submit').addEventListener('click', async () => {
+    try {
+      const record = await pb.collection('email_list').create({
+        email: `test${Date.now()}@example.com`
+      });
+      result.textContent = '✅ Successfully submitted test email: ' + record.email;
+    } catch (err) {
+      console.error(err);
+      result.textContent = '❌ Error submitting: ' + (err?.message || 'Unknown error');
+    }
+  });
+  // @request.headers.referer = "https://wethepeople.network/"
+</script>
+
+
 </body>
 </html>
